@@ -1,9 +1,9 @@
 class Player
 	attr_accessor :name, :points
 
-	def initalize
-		@name = ""
-		@points = 0
+	def initialize(player = "", points = 0)
+		@name = player
+		@points = points
 	end
 
 	def editname(nick, nick1)

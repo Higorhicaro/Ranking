@@ -1,8 +1,9 @@
-require_relative 'ranking.rb'
+require_relative 'ranking'
 
 class Index
 	def initialize
-		Ranking.execute
+		rank = Ranking.new
+		rank.execute
 	end
 end
 
