@@ -12,11 +12,12 @@ class Lista
 		@list << play
 	end
 
-	def editname(player, point)
-		play = list[player]
-		play.points = point
+	def editname(player, nick)
+		play = Player.new(player)
+		playe = @list  ?   (play)
+		playe.name = nick
 	end
-	
+
 	def printlist
 		tam = @list.size - 1
 		if tam > -1 then
