@@ -23,6 +23,26 @@ class Lista
 		playe.points = point
 	end
 
+	def rankeando
+		tam = @list.size - 1
+		if tam > 0 then
+			for i in 0..tam
+				for j in i..tam
+					play = @list[i]
+					player = @list[j]
+					if play.points < player.points then
+						aux = play.indic
+						play.indic = player.indic
+						player.indic = aux
+
+						@list[i] = player
+						@list[j] = play
+					end
+				end
+			end
+		end
+	end
+
 	def printlist
 		tam = @list.size - 1
 		if tam > -1 then

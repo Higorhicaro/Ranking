@@ -29,12 +29,14 @@ class Ranking
 				puts "Digite a nova pontuacao."
 				point = gets.to_i
 				@lis.editpoints(indic, point)
+				@lis.rankeando
 			elsif option == 3 then
 				puts "Digite o nome do novo participante."
 				nick = gets.chomp!
 				puts "Digite a pontuacao."
 				point = gets.to_i
 				@lis.addplayer(nick, point)
+				@lis.rankeando
 			end
 		end
 	end
