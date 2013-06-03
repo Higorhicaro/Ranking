@@ -18,13 +18,17 @@ class Ranking
 			puts "Digite 3 para adicionar algum participante."
 			option = gets.to_i
 			if option == 1 then
-				puts "Digite o nome de quem quer mudar de nome."
-				nick = gets.chomp!
+				puts "Digite o indice de quem quer mudar de nome."
+				indic = gets.to_i
 				puts "Digite o novo nome."
 				nick1 = gets.chomp!
-				@lis.editname(nick,nick1)
+				@lis.editname(indic,nick1)
 			elsif option == 2 then
-
+				puts "Digite o indice de quem quer alterar a pontuacao."
+				indic = gets.to_i
+				puts "Digite a nova pontuacao."
+				point = gets.to_i
+				@lis.editpoints(indic, point)
 			elsif option == 3 then
 				puts "Digite o nome do novo participante."
 				nick = gets.chomp!
